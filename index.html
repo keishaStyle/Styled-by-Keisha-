@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Styled by Keisha</title>
+  <style>
+    /* Luxury theme: black + gold + white */
+    *{box-sizing:border-box;margin:0;padding:0}
+    html,body{height:100%}
+    body{font-family:Georgia, "Times New Roman", serif;background:#fff;color:#222;line-height:1.6}
+    nav{background:#000;padding:12px;text-align:center}
+    nav a{color:#d4af37;text-decoration:none;margin:0 12px;font-weight:700}
+    nav a:hover{color:#fff}
+    .hero{
+      min-height:48vh;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      text-align:center;
+      color:#fff;
+      padding:40px 16px;
+      background:
+        linear-gradient(rgba(0,0,0,0.65), rgba(0,0,0,0.65)),
+        url("images/hero.jpg") center/cover no-repeat;
+    }
+    .hero h1{font-size:2.4rem;color:#d4af37;margin-bottom:8px}
+    .hero p{font-size:1.05rem;color:#f6f3f0}
+    .wrap{max-width:1000px;margin:auto;padding:28px 16px}
+    h2{color:#d4af37;text-align:center;margin-bottom:14px;font-size:1.6rem}
+    .about{background:#fff;padding:22px;border-radius:8px;margin-bottom:20px;text-align:center}
+    .about img{display:block;margin:14px auto;border-radius:8px;max-width:260px;width:90%;}
+    .services-preview{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:16px;margin-top:18px}
+    .card{background:#111;color:#fff;padding:16px;border:2px solid #d4af37;border-radius:8px;text-align:center}
+    .card h3{color:#d4af37;margin-bottom:6px}
+    .portfolio{margin-top:24px}
+    .gallery{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:12px;align-items:start}
+    .gallery img{width:100%;height:150px;object-fit:cover;border-radius:8px;display:block}
+    .gallery a{display:block}
+    .flyer{margin-top:18px;text-align:center}
+    .contact{margin-top:28px;text-align:center}
+    .btn{
+      display:inline-block;margin-top:12px;padding:10px 18px;background:#d4af37;color:#000;text-decoration:none;border-radius:6px;font-weight:700
+    }
+    footer{background:#111;color:#ddd;text-align:center;padding:16px;margin-top:30px;font-size:0.9rem}
+    /* hide broken images gracefully */
+    img.broken{display:none}
+  </style>
+</head>
+<body>
+
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="services.html">Services</a>
+    <a href="portfolio.html">Portfolio</a>
+    <a href="contact.html">Contact</a>
+  </nav>
+
+  <section class="hero" role="region" aria-label="Hero">
+    <div>
+      <h1>💎 Styled by Keisha</h1>
+      <p>Luxury Styling • Personal Shopping • Event Coordination</p>
+      <a class="btn" href="services.html">View Services</a>
+    </div>
+  </section>
+
+  <div class="wrap">
+
+    <section class="about">
+      <h2>About Keisha</h2>
+      <!-- will hide if image file missing -->
+      <img id="keishaImg" src="images/keisha.jpg" alt="Keisha personal photo"
+           onerror="this.className='broken'">
+      <p>Keisha is a luxury stylist dedicated to creating unforgettable looks. She books photographers, makeup artists, tailors and venues — making your shoot or event effortless and beautiful.</p>
+    </section>
+
+    <section>
+      <h2>Quick Services Preview</h2>
+      <div class="services-preview">
+        <div class="card">
+          <h3>🎉 Birthday & Event Styling</h3>
+          <p>₦15,000 – ₦25,000</p>
+        </div>
+        <div class="card">
+          <h3>💍 Weddings & Pre-Wedding</h3>
+          <p>₦40,000 – ₦70,000</p>
+        </div>
+        <div class="card">
+          <h3>🛍 Personal Shopping</h3>
+          <p>₦20,000 – ₦35,000</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="portfolio">
+      <h2>Portfolio — Past Work</h2>
+      <p style="text-align:center">Tap any image to open full size</p>
+      <div class="gallery">
+        <!-- clicking opens the full image in browser -->
+        <a href="images/portfolio1.jpg" target="_blank"><img src="images/portfolio1.jpg" alt="Portfolio 1" onerror="this.className='broken'"></a>
+        <a href="images/portfolio2.jpg" target="_blank"><img src="images/portfolio2.jpg" alt="Portfolio 2" onerror="this.className='broken'"></a>
+        <a href="images/portfolio3.jpg" target="_blank"><img src="images/portfolio3.jpg" alt="Portfolio 3" onerror="this.className='broken'"></a>
+        <!-- flyer -->
+        <a href="images/flyer.jpg" target="_blank"><img src="images/flyer.jpg" alt="Services Flyer" onerror="this.className='broken'"></a>
+      </div>
+    </section>
+
+    <section class="flyer">
+      <h2>Our Services Flyer</h2>
+      <a href="images/flyer.jpg" target="_blank"><img src="images/flyer.jpg" alt="flyer" onerror="this.className='broken'"></a>
+    </section>
+
+    <section class="contact">
+      <h2>Book a Session</h2>
+      <p>📞 <a href="tel:+2349074456374">+234 907 445 6374</a> • <a href="contact.html">Contact Page</a></p>
+      <a class="btn" href="contact.html">Book Now</a>
+    </section>
+
+  </div>
+
+  <footer>
+    © 2025 Styled by Keisha • Available in Owerri & Nationwide • IG: @StyledByKeisha
+  </footer>
+
+</body>
+</html>

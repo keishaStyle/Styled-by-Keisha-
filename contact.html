@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact Styled by Keisha</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #fffafc;
+      color: #333;
+      margin: 0;
+      padding: 0;
+    }
+    header {
+      background: #d63384;
+      color: white;
+      padding: 20px;
+      text-align: center;
+    }
+    form {
+      max-width: 500px;
+      margin: 30px auto;
+      padding: 20px;
+      background: #fff;
+      border-radius: 8px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    }
+    input, textarea, button {
+      width: 100%;
+      padding: 10px;
+      margin: 10px 0;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      font-size: 16px;
+    }
+    button {
+      background: #d63384;
+      color: white;
+      border: none;
+      cursor: pointer;
+    }
+    button:hover {
+      background: #a91e63;
+    }
+    .other-contacts {
+      text-align: center;
+      margin: 30px 0;
+    }
+    .other-contacts a {
+      display: block;
+      margin: 10px 0;
+      color: #d63384;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    .other-contacts a:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Contact Styled by Keisha</h1>
+    <p>We’d love to hear from you 💖</p>
+  </header>
+
+  <form id="contactForm">
+    <input type="text" id="name" placeholder="Your Name" required>
+    <input type="email" id="email" placeholder="Your Email" required>
+    <textarea id="message" rows="5" placeholder="Your Message" required></textarea>
+    <button type="submit">Send on WhatsApp</button>
+  </form>
+
+  <div class="other-contacts">
+    <h3>Other Ways to Reach Me</h3>
+    <a href="mailto:styledbykeisha@gmail.com">📧 styledbykeisha@gmail.com</a>
+    <a href="https://instagram.com/styledbykeisha" target="_blank">📸 Instagram: @styledbykeisha</a>
+  </div>
+
+  <script>
+    const KEISHA_NUMBER = "2349074456374"; // ✅ her real WhatsApp number
+
+    document.getElementById("contactForm").addEventListener("submit", function(e) {
+      e.preventDefault();
+      const name = document.getElementById("name").value;
+      const email = document.getElementById("email").value;
+      const message = document.getElementById("message").value;
+
+      const whatsappMessage = `Hello, my name is ${name}.\nMy email: ${email}\nMessage: ${message}`;
+      const whatsappURL = `https://wa.me/${KEISHA_NUMBER}?text=${encodeURIComponent(whatsappMessage)}`;
+
+      window.open(whatsappURL, "_blank");
+    });
+  </script>
+
+</body>
+</html>
